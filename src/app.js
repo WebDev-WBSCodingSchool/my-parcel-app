@@ -9,9 +9,10 @@ const markerIcon = Leaflet.icon({
 }); // There was an issue with the default marker icon, so we create a new one
 Leaflet.marker(WBS, { icon: markerIcon }).addTo(map); // add a marker to the map at the WBS coordinates
 
-Leaflet.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+Leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
-  attribution: '&copy; <a href="https://google.com" target="_blank">Google</a>'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map); // add a tile layer to the map, the tiles are those images that make up the map
 
 const myLocations = [
